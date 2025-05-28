@@ -16,6 +16,7 @@ data, addr = client.recvfrom(4096)
 print(data.decode('utf-8'))
 # Close the socket
 client.close()
+
 # Note: UDP is connectionless, so we don't need to connect the socket
 # before sending data. The server will respond to the address we sent data to.
 # The server must be running and listening on the specified port for this to work.

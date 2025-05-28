@@ -1,7 +1,7 @@
 import socket
 
 target_host = 'www.google.com'
-target_port = 80
+target_port = 80     
 
 # Create a socket object
 #AF_INET is used for IPv4 addresses, SOCK_STREAM is used for TCP
@@ -16,6 +16,7 @@ client.connect((target_host, target_port))
 # - "\r\n\r\n" signals end of headers
 # Must be sent as bytes, hence the b"" prefix
 client.send(b"GET / HTTP/1.1\r\nHost: www.google.com\r\n\r\n")
+
 # Receive some data
 response = client.recv(4096)
 
